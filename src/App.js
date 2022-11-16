@@ -44,14 +44,13 @@ function App() {
 
   return (
     <>
-
-      <input ref={todoNameRef} type="text" placeholder="Enter a To do" />
+      <input ref={todoNameRef} type="text" placeholder="Enter a new task" />
       <br/>
-      <button onClick={addTodo}>Add To do</button>{" "}
-      <button onClick={clearTodo}>Clear To do</button>
+      <button onClick={addTodo}>Add task</button>{" "}
+      <button onClick={clearTodo}>Clear task</button>
       <br/>
       <br/>
-      <div>Yuo have {todos.filter(todo=>!todo.complete).length} to do</div>
+      <div>Yuo have {todos.filter(todo=>!todo.complete).length} tasks left</div>
       <br/>
       <TodoList todoList={todos} togolTodo={togolTodo}/>
     </>
